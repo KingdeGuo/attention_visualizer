@@ -61,6 +61,8 @@ $$
 
 ## 功能特性
 
+![Attention可视化效果](./docs/images/image.png)
+
 - 逐步展示注意力机制计算过程
 - 3D可视化Query/Key/Value向量
 - 3D注意力权重热力图
