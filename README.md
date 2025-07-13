@@ -61,7 +61,12 @@ $$
 
 ## 功能特性
 
-![Attention可视化效果](./docs/images/image.png)
+![Attention可视化效果1](./docs/images/image.png)
+![Attention可视化效果2](./docs/images/image2.png) 
+![Attention可视化效果3](./docs/images/image3.png)
+![Attention可视化效果4](./docs/images/image4.png)
+![Attention可视化效果5](./docs/images/image5.png)
+![Attention可视化效果6](./docs/images/image6.png)
 
 - 逐步展示注意力机制计算过程
 - 3D可视化Query/Key/Value向量
