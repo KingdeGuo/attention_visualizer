@@ -8,9 +8,7 @@
 
 注意力机制的核心计算可以表示为：
 
-$$
-\text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-$$
+$$\text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
 
 其中：
 - $Q$ (Query): 查询向量
@@ -22,38 +20,27 @@ $$
 
 1. **Query/Key/Value计算**:
    - 输入向量$X$通过线性变换得到$Q$, $K$, $V$:
-     $$
-     Q = XW_q, \quad K = XW_k, \quad V = XW_v
-     $$
+$$Q = XW_q, \quad K = XW_k, \quad V = XW_v$$
 
 2. **注意力分数计算**:
    - 计算查询和键的点积并缩放:
-     $$
-     \text{scores} = \frac{QK^T}{\sqrt{d_k}}
-     $$
+$$\text{scores} = \frac{QK^T}{\sqrt{d_k}}$$
 
 3. **Softmax归一化**:
    - 对注意力分数进行softmax归一化得到权重:
-     $$
-     \text{weights} = \text{softmax}(\text{scores})
-     $$
+$$\text{weights} = \text{softmax}(\text{scores})$$
 
 4. **加权求和**:
    - 用权重对值向量加权求和得到输出:
-     $$
-     \text{output} = \text{weights} \cdot V
-     $$
+$$\text{output} = \text{weights} \cdot V$$
 
 ### 多头注意力
 
 多头注意力并行计算多组注意力并将结果拼接:
-$$
-\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O
-$$
+$$\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O$$
+
 其中每个注意力头:
-$$
-\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
-$$
+$$\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$$
 
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
